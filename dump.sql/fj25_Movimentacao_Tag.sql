@@ -1,0 +1,56 @@
+CREATE DATABASE  IF NOT EXISTS `fj25` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `fj25`;
+-- MySQL dump 10.13  Distrib 5.5.22, for debian-linux-gnu (i686)
+--
+-- Host: localhost    Database: fj25
+-- ------------------------------------------------------
+-- Server version	5.5.22-0ubuntu1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `Movimentacao_Tag`
+--
+
+DROP TABLE IF EXISTS `Movimentacao_Tag`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Movimentacao_Tag` (
+  `Movimentacao_id` int(11) NOT NULL,
+  `tags_id` int(11) NOT NULL,
+  KEY `FK6793E65EF39E677E` (`tags_id`),
+  KEY `FK6793E65EE266F157` (`Movimentacao_id`),
+  CONSTRAINT `FK6793E65EE266F157` FOREIGN KEY (`Movimentacao_id`) REFERENCES `Movimentacao` (`id`),
+  CONSTRAINT `FK6793E65EF39E677E` FOREIGN KEY (`tags_id`) REFERENCES `Tag` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Movimentacao_Tag`
+--
+
+LOCK TABLES `Movimentacao_Tag` WRITE;
+/*!40000 ALTER TABLE `Movimentacao_Tag` DISABLE KEYS */;
+INSERT INTO `Movimentacao_Tag` VALUES (18,1),(18,2),(19,3),(19,4),(20,3),(20,4),(20,5),(20,6),(21,7),(21,2),(29,17),(29,18),(29,19),(29,16),(29,15),(30,19),(30,14),(31,19),(31,14),(31,16),(31,15),(32,17),(32,19),(32,14),(32,16),(32,15),(33,17),(33,18),(33,19),(33,14),(33,16),(34,17),(34,19),(34,15),(35,17),(35,14),(35,15),(36,17),(36,18),(36,19),(36,14),(36,16),(36,15),(37,19),(37,16),(37,15),(38,18),(38,16),(39,19),(39,18),(39,16),(40,17),(40,15),(41,17),(41,19),(41,14),(41,16),(42,19),(42,18),(42,14),(42,16),(42,15),(43,17),(43,14),(43,16),(43,15),(44,18),(44,19),(44,15),(45,17),(45,19),(45,16),(45,15),(46,17),(46,18),(46,19),(46,14),(47,17),(47,18),(47,19),(47,14),(47,16),(48,19),(48,18),(48,14),(48,16),(48,15),(49,19),(49,15),(50,17),(50,18),(50,14),(50,16),(50,15),(51,18),(51,19),(51,14),(51,16),(51,15),(52,18),(52,16),(52,15),(53,17),(53,19),(53,18),(53,16),(53,15),(54,17),(54,18),(54,14),(55,19),(55,14),(55,16),(56,17),(56,14),(56,16),(56,15),(57,17),(57,18),(57,19),(57,14),(57,16),(57,15),(58,17),(58,19),(58,14),(58,16),(58,15),(59,17),(59,18),(59,15),(60,17),(60,14),(60,15),(61,15),(62,18),(62,14),(63,17),(63,19),(63,14),(64,17),(64,19),(64,15),(65,17),(65,18),(65,14),(65,16),(66,19),(66,18),(66,14),(66,15),(67,18),(67,14),(67,16),(68,19),(68,14),(68,16),(69,17),(69,19),(69,14),(69,16),(69,15),(70,19),(70,18),(70,14),(70,16),(70,15),(71,17),(71,19),(71,18),(71,14),(71,15),(72,17),(72,19),(72,18),(72,14),(72,15),(73,17),(73,18),(73,19),(73,14),(73,16),(73,15),(74,18),(74,15),(75,19),(75,14),(75,16),(75,15),(76,17),(76,14),(76,16),(76,15),(77,19),(77,14),(77,16),(77,15),(78,17),(78,18),(78,14),(78,16),(78,15);
+/*!40000 ALTER TABLE `Movimentacao_Tag` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2013-01-17 23:09:40
